@@ -1,0 +1,157 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+
+.navbar {
+  position: relative;
+  min-height: 50px;
+  border: 1px solid transparent;
+}
+
+.navbar-default {
+  background-color: black;
+  border-radius: 0px;
+  border: 0;
+  box-shadow: none;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+}
+
+.container-fluid {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  display: flex;
+}
+
+
+
+.container-fluid>.navbar-header {
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+.navbar-header:after {
+  clear: both;
+}
+
+.navbar-header:after {
+  display: table;
+  content: " ";
+}
+
+.navbar-header:before {
+  display: table;
+  content: " ";
+}
+
+.navbar-default .navbar-brand {
+  font-family: Verdana;
+  color: #ffffff;
+  font-size: 20px;
+}
+
+.navbar-brand {
+  float: left;
+  padding: 15px 15px;
+  font-size: 18px;
+  line-height: 20px;
+}
+
+.nav {
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
+  margin-top: 0;
+}
+
+.nav>li {
+  position: relative;
+  display: block;
+}
+
+.navbar-collapse {
+  margin-left: 20px;
+  display:flex;
+  align-items: center;
+}
+
+.navbar-default .navbar-collapse {
+  border-color: #e7e7e7;
+}
+
+.navbar-default .navbar-nav>li>a {
+  color: #ffffff;
+}
+
+.navbar-nav>li>a {
+  line-height: 20px;
+}
+
+.nav>li>a {
+  position: relative;
+  display: block;
+  padding: 10px 15px;
+}
+
+.forecast-name {
+  color: #0a0a0a;
+  font-size:19px;
+  font-weight: 600;
+  padding-left: 40px;
+}
+
+.forecast-name-container {
+  background-color: #ffffff;
+  padding-bottom:40px;
+  padding-top:40px;
+}
+
+.header-text {
+  color:#acacac;
+  font-size:13px;
+}
+
+.header-title {
+  font-size:16px;
+  margin-left:5px;
+}
+
+/* Table CSS */
+th, td {
+  text-align: left;
+  padding: 8px;
+}
+
+tr {
+  background-color: white;
+  border-bottom: 1px solid rgb(237, 237, 237);
+  white-space: nowrap;
+  height:56px;
+}
+
+tr:first-child {border-bottom: 3px solid rgb(195, 235, 91);}
+tr:last-child {background-color: rgb(248, 248, 248);}
+
+table tr th:first-child {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  left: 0;
+  background-color: white;
+} 
+
+table tr td:first-child {
+  position: sticky;
+  left: 0;
+  background-color: white;
+} 
+
+table tr:last-child td:first-child {
+  background-color: rgb(248, 248, 248);
+} 

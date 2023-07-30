@@ -1,0 +1,111 @@
+<!--
+  @description       : 
+  @author            : ChangeMeIn@UserSettingsUnder.SFDoc
+  @group             : 
+  @last modified on  : 07-30-2023
+  @last modified by  : pooran@test.com
+-->
+<template>
+  <div class="slds-grid slds-grid_vertical">
+    <div class="slds-col">
+      <nav class="navbar navbar-default">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <a
+              class="navbar-brand"
+              href="#"
+              style="border-right: 1px solid #414141"
+            >
+              <svg
+                version="1.2"
+                viewBox="0 0 24 24"
+                style="
+                  opacity: 1;
+                  mix-blend-mode: normal;
+                  fill: rgb(172, 172, 172);
+                  width: 30px;
+                  height: 30px;
+                  padding-left: 10px;
+                "
+              >
+                <g>
+                  <path
+                    d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"
+                    style="fill: rgb(172, 172, 172)"
+                  ></path>
+                </g>
+              </svg>
+            </a>
+          </div>
+          <div class="navbar-collapse">
+            <ul
+              class="nav navbar-nav"
+              style="list-style: none; vertical-align: middle"
+            >
+              <li style="float: left">
+                <a href="#"> </a>
+              </li>
+              <li style="float: left">
+                <a>
+                  <span class="header-text">Forecasting:</span>
+                  <span class="header-title">Opportunity Name</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+
+    <div class="slds-col forecast-name-container">
+      <span class="forecast-name">Forecast Name</span>
+    </div>
+    <div class="slds-col">
+      <div
+        style="
+          background-color: #f8f8f8;
+          border: 1px solid rgb(237, 237, 237);
+          text-align: right;
+          height: 61px;
+        "
+      >
+        <lightning-button-group style="margin-top: 13px; margin-right: 10px">
+          <lightning-button label="View"></lightning-button>
+          <lightning-button-menu
+            alternative-text="Show menu"
+            variant="border-filled"
+          >
+            <lightning-menu-item
+              label="Show full attributes"
+              value="item1"
+            ></lightning-menu-item>
+            <lightning-menu-item
+              label="Show monthly summary"
+              value="item2"
+            ></lightning-menu-item>
+          </lightning-button-menu>
+        </lightning-button-group>
+      </div>
+    </div>
+    <div class="slds-col">
+      <div style="overflow-x: auto">
+        <table>
+          <tbody>
+            <tr>
+              <template for:each={tableHeader} for:item="th">
+                <th key={th.key}>{th.label}</th>
+              </template>
+            </tr>
+            <template for:each={tableData} for:item="tr">
+              <tr key={tr.index}>
+                <template for:each={tr.data} for:item="td">
+                  <td key={tr.index}>{td.value}</td>
+                </template>
+              </tr>
+            </template>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</template>
